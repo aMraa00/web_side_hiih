@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Миний презентаци</title>
+</head>
+<body>
+    <!-- Хуудас 1 -Танилцуулга -->
+    <section id="page-1" class="page">
+        <h1>Миний презентацид тавтай морил</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt esse minima rem ab ex. Accusantium eum nisi odio rem vitae quia debitis mollitia et, cum facere, similique in ducimus!</p>
+        <div>
+            <a href="#page-2" class="btn btn-dark">Дараагийн хуудас <ion-icon name="arrow-down-circle"></ion-icon></a>
+        </div>
+    </section>
+    <!-- Хуудас 2 -Танилцуулга -->
+    <section id="page-2" class="page">
+        <h1>Хуудас 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt esse minima rem ab ex. Accusantium eum nisi odio rem vitae quia debitis mollitia et, cum facere, similique in ducimus!</p>
+        <div>
+            <a href="#page-1" class="btn">Өмнөх хуудас <ion-icon name="arrow-up-circle"></ion-icon></a>
+            <a href="#page-3" class="btn btn-dark">Дараагийн хуудас <ion-icon name="arrow-down-circle"></ion-icon></a>
+        </div>
+    </section>
+    <!-- Хуудас 3 -Танилцуулга -->
+    <section id="page-3" class="page">
+        <h1>Хуудас 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt esse minima rem ab ex. Accusantium eum nisi odio rem vitae quia debitis mollitia et, cum facere, similique in ducimus!</p>
+        <div>
+            <a href="#page-2" class="btn">Өмнөх хуудас <ion-icon name="arrow-up-circle"></ion-icon></a>
+            <a href="#page-4" class="btn btn-dark">Дараагийн хуудас <ion-icon name="arrow-down-circle"></ion-icon></a>
+        </div>
+    </section>
+    <!-- Хуудас 4 -Танилцуулга -->
+    <section id="page-4" class="page">
+        <h1>Хуудас 4</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt esse minima rem ab ex. Accusantium eum nisi odio rem vitae quia debitis mollitia et, cum facere, similique in ducimus!</p>
+        <div>
+            <a href="#page-3" class="btn">Өмнөх хуудас <ion-icon name="arrow-up-circle"></ion-icon></a>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        //Smooth scroll
+        $('.btn').on('click', function(event){
+            if(this.hash !== ''){
+                event.preventDefault();
+                const hash = this.hash;
+                $('html, body').animate(
+                    {
+                        scrollTop: $(hash).offset().top
+                    },
+                    800
+                );
+            }
+        });
+    </script>
+</body>
+</html>
